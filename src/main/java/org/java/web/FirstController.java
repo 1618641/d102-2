@@ -25,7 +25,7 @@ public class FirstController {
         //从主体获得用户的主要凭证（就是认证方法，返回的SimpleAuthencationInfo对象的第一个参数，map）
         Map map = (Map) subject.getPrincipal();
 
-        //获得用户名与菜单，存放在session中
+        //                 ssss获得用户名与菜单，存放在session中
         String username = (String) map.get("username");
         //获得菜单
         List<Map> menus = (List<Map>) map.get("menus");
