@@ -1,0 +1,15 @@
+server:
+  port: 9999
+spring:
+  thymeleaf:
+    encoding: UTF-8
+    cache: false
+    mode: LEGACYHTML5
+  datasource:
+    url: jdbc:mysql:///j68
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+mybatis:
+  type-aliases-package: java.util
+  mapper-locations: mapper/*Mapper.xml

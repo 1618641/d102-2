@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body,html{
+            height: 100%;
+        }
+        table,tr,th,td{
+            border: 1px black solid;
+            border-collapse: collapse;
+        }
+
+        a{
+            color:blue;
+            text-decoration: none;
+        }
+        a:hover{
+            color:Red;
+        }
+        b{
+            color:Red;
+        }
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body style="margin: 0px;">
+    <Table width="100%" height="100%">
+        <TR height="120px">
+            <Td colspan="2">
+                <B>[[${session.user}]]</B>
+                <a th:href="@{'/logout'}">退出</a>
+            </Td>
+        </TR>
+        <Tr>
+            <Td width="15%" valign="top" align="center">
+                <ul th:each="m:${session.menus}">
+                      <li>
+                          <a th:href="@{|${m.url}|}">[[${m.NAME}]]</a>
+                      </li>
+                </ul>
+            </Td>
+            <Td>右边</Td>
+        </Tr>
+    </Table>
+</body>
+</html>
