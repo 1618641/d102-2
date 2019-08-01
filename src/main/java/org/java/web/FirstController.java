@@ -18,7 +18,7 @@ import java.util.Map;
 public class FirstController {
     @GetMapping("/")
     public String first(HttpSession session){
-        System.out.println("--------first-------------");
+        System.out.println("--------22first-------------");
         //获得认证成功的主体
         Subject subject = SecurityUtils.getSubject();
 
